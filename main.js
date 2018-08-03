@@ -4,7 +4,6 @@ closeSurveryButton.addEventListener('click', function(){
     surveyLightbox.classList.add('hidden');
 });
 
-
 var importSurveyInformation = document.querySelector('[data-coffee-questionnaire="form"]');
 importSurveyInformation.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -21,4 +20,5 @@ importSurveyInformation.addEventListener('submit', function (event) {
     surveyResults.sweetness = sweetnessInput.value;
     surveyResults.flavor = flavorInput.value;
     console.log(surveyResults);
+
 });

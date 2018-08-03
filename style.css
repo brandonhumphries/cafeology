@@ -42,6 +42,15 @@ html, body {
     margin: 1em;
 }
 
+.temperature-input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.temperature-header {
+    text-align: center;
+}
+
 .temperature-buttons-container {
     display: flex;
     padding-top: 0.3em;
@@ -51,9 +60,18 @@ html, body {
     padding: 0 1em;
 }
 
+.strength-level-header {
+    text-align: center;
+    padding-bottom: 0.3em;
+}
+
 .strength-level {
     display: flex;
     flex-direction: column;
+}
+
+.sweetness-level-header {
+    padding-bottom: 0.3em;
 }
 
 .sweetness-level {
@@ -73,4 +91,13 @@ html, body {
 
 .flavor-container {
     display: flex;
+    padding-bottom: 0.3em;
 }
+.window-title{
+    font-style: bold;
+    text-decoration: underline; 
+}
+.content-master-container{
+    
+}
+
