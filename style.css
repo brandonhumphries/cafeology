@@ -72,3 +72,10 @@ html, body {
 .flavor-container {
     display: flex;
 }
+.window-title{
+    font-style: bold;
+    text-decoration: underline; 
+}
+.content-master-container{
+    
+}
