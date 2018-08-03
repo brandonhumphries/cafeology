@@ -91,3 +91,11 @@ html, body {
     display: flex;
     padding-bottom: 0.3em;
 }
+.window-title{
+    font-style: bold;
+    text-decoration: underline; 
+}
+.content-master-container{
+    
+}
+
