@@ -7,6 +7,7 @@ closeSurveryButton.addEventListener('click', function(){
 var importSurveyInformation = document.querySelector('[data-coffee-questionnaire="form"]');
 importSurveyInformation.addEventListener('submit', function (event) {
     event.preventDefault();
+    var surveyLightbox = document.querySelector('[class="lightbox-questionnaire-container"]')
     var temperatureInput = document.querySelector('[name="temperature"]:checked');
     var strengthInput = document.querySelector('[name="strength-level-input"]');
     var creamInput = document.querySelector('[name="cream-level-input"]');
@@ -20,5 +21,6 @@ importSurveyInformation.addEventListener('submit', function (event) {
     surveyResults.sweetness = sweetnessInput.value;
     surveyResults.flavor = flavorInput.value;
     console.log(surveyResults);
+    surveyLightbox.classList.add('hidden');
 
 });
