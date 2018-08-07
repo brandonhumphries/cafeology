@@ -2,6 +2,7 @@ html, body {
     height: 100%;
     width: 100%;
     margin: 0;
+    padding: 0; 
 }
 
 .lightbox-questionnaire-container {
@@ -13,7 +14,9 @@ html, body {
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color: rgb(184, 181, 181, 0.5)
+    background-color: rgb(184, 181, 181, 0.5);
+    font-family: sans-serif;
+    z-index: 5;
 }
 
 .hidden {
@@ -23,7 +26,7 @@ html, body {
 .lightbox-questionnaire {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 6px;
     background-color: white;
 }
 
@@ -93,25 +96,66 @@ html, body {
     display: flex;
     padding-bottom: 0.3em;
 }
-.window-title{
+.content-master-container {
     font-style: bold;
-    text-decoration: underline; 
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 560px;
+    background-color: rgba(255,255,255,.5);
 }
-.content-master-container{
-    
-}
-.background{
+.background {
     background-image: url("2.jpg");
     background-position: center center;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-.header{
+.individual-content-container-aeropress-coffee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+.vid-container {
+    position: relative;
+    min-height: 315px;
+    max-height: 315px;
+    width: 100%;
+    max-width: 516px;
+    overflow: hidden;
+}
+.training-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.video-description {
+    display: flex;
+    max-width: 500px;
+    color: rgba(186,142,93,1);
+    font-style: normal;
+}
+.header {
 	margin: 0;
 	padding: 0;
     background-color: rgb(38, 10, 10);
+    width: 100%;
     height: 55px;
 }
-.nav-header-parent{
+.window-title {
+    color: rgba(186,142,93,1);
+}
+.video-title {
+    color: rgba(186,142,93,1);
+}
+.nav-header-parent {
     display: flex;
     width: 100%;
     height: 55px;
@@ -122,7 +166,7 @@ html, body {
     flex-direction: row-reverse;
     justify-content: right;    
 }
-.nav-header-child{
+.nav-header-child {
     display: flex;
 	border: 0 solid;
 	font-size: 14px;
@@ -138,8 +182,8 @@ html, body {
     transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
     margin: 10px 20px;
 }
-
-.logo{
+    
+.logo {
     display: flex;
     margin-left: 7px;
 	font-size: 20px;
