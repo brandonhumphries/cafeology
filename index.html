@@ -6,6 +6,62 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>☕️ Coffeology ☕️</title>
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAqhwmoPEvOe2kWUznJ30UydrEee8RoDUw",
+            authDomain: "coffeeology-1533567827211.firebaseapp.com",
+            databaseURL: "https://coffeeology-1533567827211.firebaseio.com",
+            projectId: "coffeeology-1533567827211",
+            storageBucket: "coffeeology-1533567827211.appspot.com",
+            messagingSenderId: "305279930449"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+ src="https://cdn.firebase.com/libs/firebaseui/3.2.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.2.0/firebaseui.css" />
+    <script type="text/javascript">
+        // FirebaseUI config.
+        var uiConfig = {
+            signInSuccessUrl: 'index.html',
+            callbacks: {
+                signInSuccessWithAuthResult: function(user, credential, redirectUrl) {
+                    if (window.opener) {
+                        // The widget has been opened in a popup, so close the window
+                        // and return false to not redirect the opener.
+                        window.close();
+                        return false;
+                    } else {
+                        // The widget has been used in redirect mode, so we redirect to the signInSuccessUrl.
+                        return true;
+                    }
+                }
+            },
+            signInOptions: [
+            // Leave the lines as is for the providers you want to offer your users.
+            firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+            firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+            firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+            firebase.auth.GithubAuthProvider.PROVIDER_ID,
+            firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+            firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
+            ],
+            // Terms of service url.
+            tosUrl: 'index.html',
+            // Privacy policy url.
+            privacyPolicyUrl: 'index.html'
+        };
+
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        // The start method will wait until the DOM is loaded.
+        ui.start('.firebaseui-auth-container', uiConfig);
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <title>☕️ Coffeology ☕️</title>
     
 </head>
 <body class="background">
