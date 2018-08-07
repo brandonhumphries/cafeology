@@ -35,6 +35,10 @@ html, body {
     flex-direction: row-reverse;
 }
 
+.survey-login-container {
+    display: flex;
+}
+
 .coffee-questionnaire {
     display: flex;
     flex-direction: column;
@@ -128,6 +132,17 @@ html, body {
     max-width: 516px;
     overflow: hidden;
 }
+.content-master-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+}
+.individual-content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+}
 .training-video {
     position: absolute;
     top: 0;
@@ -193,5 +208,8 @@ html, body {
 	justify-content: left;
     color: rgba(186,142,93,1);
 	font-family: sans-serif;
-
+}
+.calculator-container {
+    display: flex;
+    justify-content: space-around;
 }
