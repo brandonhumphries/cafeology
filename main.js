@@ -25,4 +25,4 @@ importSurveyInformation.addEventListener('submit', function (event) {
 
 });
 
-firebase.auth();
+// firebase.auth();

@@ -24,7 +24,20 @@
     <script type="text/javascript">
         // FirebaseUI config.
         var uiConfig = {
-            signInSuccessUrl: '<url-to-redirect-to-on-success>',
+            signInSuccessUrl: 'index.html',
+            callbacks: {
+                signInSuccessWithAuthResult: function(user, credential, redirectUrl) {
+                    if (window.opener) {
+                        // The widget has been opened in a popup, so close the window
+                        // and return false to not redirect the opener.
+                        window.close();
+                        return false;
+                    } else {
+                        // The widget has been used in redirect mode, so we redirect to the signInSuccessUrl.
+                        return true;
+                    }
+                }
+            },
             signInOptions: [
             // Leave the lines as is for the providers you want to offer your users.
             firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -36,15 +49,15 @@
             firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
             ],
             // Terms of service url.
-            tosUrl: '<your-tos-url>',
+            tosUrl: 'index.html',
             // Privacy policy url.
-            privacyPolicyUrl: '<your-privacy-policy-url>'
+            privacyPolicyUrl: 'index.html'
         };
 
         // Initialize the FirebaseUI Widget using Firebase.
         var ui = new firebaseui.auth.AuthUI(firebase.auth());
         // The start method will wait until the DOM is loaded.
-        ui.start('#firebaseui-auth-container', uiConfig);
+        ui.start('.firebaseui-auth-container', uiConfig);
     </script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -135,6 +148,26 @@
                 <h3 class="video-title">AeroPress - Cup Of Coffee</h3>
                 <iframe class="training-video" width="560" height="315" src="https://www.youtube.com/embed/e49L51T-ISE" frameborder="0" allowfullscreen></iframe>
                 <p class="video-description">In this video you will learn a simple way to brew your morning cup of coffee using an AeroPress and the inverted method. This is easy to learn, quick to master and quick and easy to clean up. This is a great and easy morning brew method to get your day started right. </p>
+                <div class="calculator-container">
+                    <div>
+                        Estimated Startup Costs
+                    </div>
+                    <div>
+                        $$
+                    </div>
+                    <div>
+                        Cost per cup
+                    </div>
+                    <div>
+                        $$
+                    </div>
+                    <div>
+                        Savings
+                    </div>
+                    <div>
+                        $$
+                    </div>
+                </div>
             </div>
             <div class="individual-content-container aeropress-latte">
                 <h3 class="video-title">AeroPress - Latte</h3>
@@ -144,7 +177,7 @@
 
         </div>
     </div>
-    <div id="firebaseui-auth-container"></div>
+    <div class="firebaseui-auth-container"></div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="main.js"></script>
 </body>
