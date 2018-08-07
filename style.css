@@ -32,6 +32,10 @@ html, body {
     flex-direction: row-reverse;
 }
 
+.survey-login-container {
+    display: flex;
+}
+
 .coffee-questionnaire {
     display: flex;
     flex-direction: column;

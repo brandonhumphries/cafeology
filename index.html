@@ -69,73 +69,76 @@
                     X
                 </button>
             </div>
-            <form data-coffee-questionnaire="form" class="coffee-questionnaire">
-                <h2 class="questionnaire-header">
-                    How do you like your coffee?
-                </h2>
-                <div class="temperature-input-container">
-                    <span class="temperature-header">Temperature</span>
-                    <div class="temperature-buttons-container">
+            <div class="survey-login-container">
+                <form data-coffee-questionnaire="form" class="coffee-questionnaire">
+                    <h2 class="questionnaire-header">
+                        How do you like your coffee?
+                    </h2>
+                    <div class="temperature-input-container">
+                        <span class="temperature-header">Temperature</span>
+                        <div class="temperature-buttons-container">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="temperature" value="Hot">
+                                    Hot
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="temperature" value="Iced">
+                                    Iced
+                                </label>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="form-group strength-level-container">
+                        <label class="strength-level">
+                            <span class="strength-level-header">Strength Level</span>
+                            <div class="strength-level-options">
+                                Light Roast
+                                Medium Roast
+                                Dark Roast
+                            </div>
+                            <input type="range" name="strength-level-input" min="1" max="3" value="2">
+                        </label>
+                    </div>
+                    <div class="form-group cream-level-container">
+                        <label class="cream-level">
+                            Lots of cream
+                            Some Cream
+                            No Cream
+                            <input type="range" name="cream-level-input" min="1" max="3">
+                        </label>
+                    </div>
+                    <div class="form-group sweetness-level-container">    
+                        <label class="sweetness-level">
+                            <span class="sweetness-level-header">Sweetness Level</span>
+                            <div class="sweetness-options">
+                                Very Sweetened
+                                Lightly Sweetened
+                                Not Sweetened
+                            </div>
+                            <input type="range" class="sweetness-level-input" name="sweetness-level-input" min="1" max="3">
+                        </label>
+                    </div>
+                    <div class="flavor-container">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="temperature" value="Hot">
-                                Hot
+                                <input type="radio" name="flavor-input" value="Flavor">
+                                Flavor
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="temperature" value="Iced">
-                                Iced
+                                <input type="radio" name="flavor-input" value="No Flavor">
+                                No Flavor
                             </label>
                         </div>
                     </div>
-                </div>    
-                <div class="form-group strength-level-container">
-                    <label class="strength-level">
-                        <span class="strength-level-header">Strength Level</span>
-                        <div class="strength-level-options">
-                            Light Roast
-                            Medium Roast
-                            Dark Roast
-                        </div>
-                        <input type="range" name="strength-level-input" min="1" max="3" value="2">
-                    </label>
-                </div>
-                <div class="form-group cream-level-container">
-                    <label class="cream-level">
-                        Lots of cream
-                        Some Cream
-                        No Cream
-                        <input type="range" name="cream-level-input" min="1" max="3">
-                    </label>
-                </div>
-                <div class="form-group sweetness-level-container">    
-                    <label class="sweetness-level">
-                        <span class="sweetness-level-header">Sweetness Level</span>
-                        <div class="sweetness-options">
-                            Very Sweetened
-                            Lightly Sweetened
-                            Not Sweetened
-                        </div>
-                        <input type="range" class="sweetness-level-input" name="sweetness-level-input" min="1" max="3">
-                    </label>
-                </div>
-                <div class="flavor-container">
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="flavor-input" value="Flavor">
-                            Flavor
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="flavor-input" value="No Flavor">
-                            No Flavor
-                        </label>
-                    </div>
-                </div>
-                <button type="submit" class="submit-questionnaire-button">Coffeeology Me</button>
-            </form>
+                    <button type="submit" class="submit-questionnaire-button">Coffeeology Me</button>
+                </form>
+                <div class="firebaseui-auth-container"></div>
+            </div>
         </div>
     </div>
     <div class="training-window">
@@ -220,7 +223,6 @@
             </div>
         </div>
     </div>
-    <div class="firebaseui-auth-container"></div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="main.js"></script>
 </body>
