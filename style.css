@@ -1,12 +1,12 @@
 html, body {
-    height: 100%;
+    height: auto;
     width: 100%;
     margin: 0;
     padding: 0; 
 }
 
 .lightbox-questionnaire-container {
-    position: absolute;
+    position: fixed;
     display: flex;
     top: 0;
     left: 0;
@@ -33,6 +33,10 @@ html, body {
 .lightbox-close-button-container {
     display: flex;
     flex-direction: row-reverse;
+}
+
+.survey-login-container {
+    display: flex;
 }
 
 .coffee-questionnaire {
@@ -109,6 +113,7 @@ html, body {
 .background {
     background-image: url("2.jpg");
     background-position: center center;
+    background-attachment: fixed;
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -127,6 +132,17 @@ html, body {
     width: 100%;
     max-width: 516px;
     overflow: hidden;
+}
+.content-master-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+}
+.individual-content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
 }
 .training-video {
     position: absolute;
@@ -164,7 +180,9 @@ html, body {
     background-color: rgb(38, 10, 10);
     flex: 0;
     flex-direction: row-reverse;
-    justify-content: right;    
+    justify-content: right;
+    position: fixed; 
+    z-index: 5;   
 }
 .nav-header-child {
     display: flex;
@@ -193,5 +211,8 @@ html, body {
 	justify-content: left;
     color: rgba(186,142,93,1);
 	font-family: sans-serif;
-
+}
+.calculator-container {
+    display: flex;
+    justify-content: space-around;
 }
