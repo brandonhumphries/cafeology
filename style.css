@@ -98,7 +98,15 @@ html, body {
     text-decoration: underline; 
 }
 .content-master-container{
-    
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+}
+.individual-content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
 }
 
 .calculator-container {
