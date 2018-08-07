@@ -1,12 +1,12 @@
 html, body {
-    height: 100%;
+    height: auto;
     width: 100%;
     margin: 0;
     padding: 0; 
 }
 
 .lightbox-questionnaire-container {
-    position: absolute;
+    position: fixed;
     display: flex;
     top: 0;
     left: 0;
@@ -113,6 +113,7 @@ html, body {
 .background {
     background-image: url("2.jpg");
     background-position: center center;
+    background-attachment: fixed;
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -132,7 +133,7 @@ html, body {
     max-width: 516px;
     overflow: hidden;
 }
-.content-master-container{
+.content-master-container {
     display: flex;
     flex-direction: column;
     max-width: 80%;
@@ -179,7 +180,9 @@ html, body {
     background-color: rgb(38, 10, 10);
     flex: 0;
     flex-direction: row-reverse;
-    justify-content: right;    
+    justify-content: right;
+    position: fixed; 
+    z-index: 5;   
 }
 .nav-header-child {
     display: flex;
