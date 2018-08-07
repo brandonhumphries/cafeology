@@ -109,3 +109,7 @@ html, body {
     padding: 8px;
 }
 
+.calculator-container {
+    display: flex;
+    justify-content: space-around;
+}
