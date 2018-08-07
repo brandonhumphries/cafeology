@@ -24,3 +24,5 @@ importSurveyInformation.addEventListener('submit', function (event) {
     surveyLightbox.classList.add('hidden');
 
 });
+
+firebase.auth();
