@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Coffeeology</title>
+    <link rel="stylesheet" href="style.css">
+    <title>☕️ Coffeology ☕️</title>
     <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
     <script>
         // Initialize Firebase
@@ -18,6 +19,7 @@
         };
         firebase.initializeApp(config);
     </script>
+
 
     <script src="https://cdn.firebase.com/libs/firebaseui/3.2.0/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.2.0/firebaseui.css" />
@@ -60,8 +62,25 @@
         ui.start('.firebaseui-auth-container', uiConfig);
     </script>
     <link rel="stylesheet" href="style.css">
+
 </head>
-<body>
+<body class="background">
+    <header class="header">
+        <div class="nav-header-parent">    
+            <ul class="nav-header-child">
+                Videos
+            </ul>
+            <ul class="nav-header-child">
+                Currated Articles
+            </ul>
+            <ul class="nav-header-child">
+                Events
+            </ul>
+            <ul class="logo">
+                ☕️ Coffeology ☕️
+            </ul>
+        </div>
+    </header>
     <div class="lightbox-questionnaire-container">
         <div class="lightbox-questionnaire">
             <div class="lightbox-close-button-container">
@@ -140,6 +159,7 @@
                 <div class="firebaseui-auth-container"></div>
             </div>
         </div>
+
     </div>
     <div class="training-window">
         <h1 class="window-title">Content</h1>
@@ -161,10 +181,13 @@
                         <p>$1.30</p>
                 </div>
             </div>
-            <div class="individual-content-container aeropress-latte">
-                <h3 class="video-title">AeroPress - Latte</h3>
+            <p class="video-description">In this video you will learn a simple way to brew your morning cup of coffee using an AeroPress and the inverted method. This is easy to learn, quick to master and quick and easy to clean up. This is a great and easy morning brew method to get your day started right. </p>
+        </div>
+        <div class="individual-content-container-aeropress-coffee">
+            <h3 class="video-title">AeroPress - Latte</h3>
+            <div class="vid-container">
                 <iframe class="training-video" width="560" height="315" src="https://www.youtube.com/embed/Z_J6Q4oAvLM" frameborder="0" allowfullscreen></iframe>
-                <p class="video-description">In this video you will learn a quick and easy way to make a latte at home. All you need is an AeroPress for the espresso and a French Press to froth your milk, and any flavor you want to add for your enjoyment. </p>
+                   <p class="video-description">In this video you will learn a quick and easy way to make a latte at home. All you need is an AeroPress for the espresso and a French Press to froth your milk, and any flavor you want to add for your enjoyment. </p>
                 <a href="http://a.co/adzKIXU" class="shopping-list">Shopping List</a>
                 <div class="calculator-container">
                         <p>Estimated Startup Costs</p>
@@ -274,6 +297,7 @@
                 </div>
             </div>
         </div>
+        
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="main.js"></script>
