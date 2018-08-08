@@ -82,15 +82,22 @@ var displayBlogPosts = function (retrievedBlogPosts) {
         var blogPostContainer = document.createElement('li');
         var blogPostTitle = document.createElement('h3');
         var blogPostContent = document.createElement('p');
-        var blogPostTest = document.createElement('body');
         var blogPostLink = document.createElement('a');
+        var blogAuthor = document.createElement('p');
 
-        blogPostTitle.textContent = post.title;
-        blogPostContent.textContent = post.content;
+        blogPostLink.classList.add('blog-post-link');
         blogPostLink.textContent = post.title;
-        blogPostLink.setAttribute('href', post.url)
+
+        blogAuthor.classList.add('blog-post-author');
+        blogAuthor.textContent = 'A blog post by ' + post.author.displayName;
+
+        blogPostContainer.classList.add('blog-post-container');
+
+        blogPostLink.textContent = post.title;
+        blogPostLink.setAttribute('href', post.url);
         blogPostContainer.appendChild(blogPostTitle);
         blogPostContainer.appendChild(blogPostLink);
+        blogPostContainer.appendChild(blogAuthor);
         blogPostsSection.appendChild(blogPostContainer);
     })
 };

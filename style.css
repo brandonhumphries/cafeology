@@ -208,3 +208,36 @@ body {
     color: rgba(186,142,93,1);
 	font-family: sans-serif;
 }
+
+.blog-header {
+    color: white;
+    background-color: rgba(186,142,93,1);
+    padding: 1em;
+    border-radius: 25%;
+}
+
+.blog-posts-section {
+    width: 50%;
+    max-height: 50%;
+    background-color: rgba(255,255,255,.5);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.blog-post-container {
+    background-color: rgba(186,142,93,1);
+    text-align: center;
+    list-style: none;
+    width: 50%;
+    margin: 1em;
+    border-radius: 15%;
+}
+
+.blog-post-link {
+    text-decoration: none;
+    color: white;
+}
