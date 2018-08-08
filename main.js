@@ -47,10 +47,8 @@ signoutButton.addEventListener('click', function (){
         })
     }
     else if (signoutButton.textContent === 'Sign in') {
-        console.log('hi')
-        var surveyLightbox = document.querySelector('[class="lightbox-questionnaire-container"]');
-        surveyLightbox.classList.add('visible');
-        surveyLightbox.classList.remove('hidden');
+        var signinLightbox = document.querySelector('[class="signin-lightbox-container"]');
+        signinLightbox.classList.add('visible');
     }
 });
 
