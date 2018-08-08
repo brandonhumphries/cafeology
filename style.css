@@ -15,7 +15,7 @@ body {
     display: flex;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -186,7 +186,7 @@ body {
 	font-size: 8px;
     font-family: sans-serif;
     align-self: center;
-    box-shadow: inset 0 0 9px rgba(186,142,93,1);
+    box-shadow: inset 0 0 25px rgba(186,142,93,1);
     /* outline: 1px solid; */
 	/* outline-color: rgba(186,142,93,1); */
 	color: rgba(186,142,93,1);
@@ -196,6 +196,7 @@ body {
     padding: 5px;
     width: 5em;
     height: 2.8125em;
+    border-radius: 7px;
 }
 .logo {
     display: flex;
@@ -208,14 +209,12 @@ body {
     color: rgba(186,142,93,1);
 	font-family: sans-serif;
 }
-
 .blog-header {
     color: white;
     background-color: rgba(186,142,93,1);
     padding: 1em;
     border-radius: 25%;
 }
-
 .blog-posts-section {
     width: 50%;
     max-height: 50%;
@@ -227,7 +226,6 @@ body {
     align-items: center;
     overflow-y: auto;
 }
-
 .blog-post-container {
     background-color: rgba(186,142,93,1);
     text-align: center;
@@ -236,8 +234,10 @@ body {
     margin: 1em;
     border-radius: 15%;
 }
-
 .blog-post-link {
     text-decoration: none;
     color: white;
+}
+.events-main {
+    background: white;
 }
