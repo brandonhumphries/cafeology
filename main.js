@@ -25,4 +25,32 @@ importSurveyInformation.addEventListener('submit', function (event) {
 
 });
 
+var eventsRow = function(events) {
+    var eventList = document.createElement('li')
+    var descripBox = document.createElement('div')
+    var dateBox = document.createElement('div')
+    var titleBox = document.createElement('div')
+    
+    titleBox.textContent = 'name: ' + events.name.text.substr(0,80)
+    descripBox.textContent = ' description: ' + events.description.text.substr(0,80) 
+    dateBox.textContent = ' date: ' + events.start.local
+    
+    var events = document.querySelector('.coffeeevents')
+    eventList.appendChild(titleBox)
+    eventList.appendChild(descripBox)
+    eventList.appendChild(dateBox)
+    events.appendChild(eventList)
+}
+$.ajax('https://www.eventbriteapi.com/v3/events/search/?q=coffee+&sort_by=distance&location.address=Atlanta&location.within=60mi&token=7TWTF7476W67E2AALYCA', {
+		success: function(data) {
+			console.log(data)
+            var eventsArray = data.events;
+            var array = ['']
+			eventsArray.forEach(event => {
+				array.push(event)
+				eventsRow(event)
+			})
+		}
+	}	
+)		
 // firebase.auth();
