@@ -158,6 +158,13 @@ html, body {
     color: rgba(186,142,93,1);
     font-style: normal;
 }
+.calculator-container {
+    display: flex;
+    justify-content: space-between;
+}
+.calculator-item {
+    padding: 1em;
+}
 .header {
 	margin: 0;
 	padding: 0;
@@ -212,7 +219,4 @@ html, body {
     color: rgba(186,142,93,1);
 	font-family: sans-serif;
 }
-.calculator-container {
-    display: flex;
-    justify-content: space-around;
-}
+
