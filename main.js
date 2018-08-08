@@ -27,7 +27,6 @@ importSurveyInformation.addEventListener('submit', function (event) {
 
 });
 
-<<<<<<< HEAD
 var eventsRow = function(events) {
     var eventList = document.createElement('li')
     var descripBox = document.createElement('div')
@@ -57,7 +56,6 @@ $.ajax('https://www.eventbriteapi.com/v3/events/search/?q=coffee+&sort_by=distan
 	}	
 )		
 // firebase.auth();
-=======
 var parseLocalStorage = function() {
     var retrievedStorage = localStorage.getItem('firebaseui::rememberedAccounts');
     var parsedStorage = JSON.parse(retrievedStorage);
@@ -93,4 +91,3 @@ if (parseLocalStorage() !== null) {
     surveyLightbox.classList.add('hidden');
 }
 
->>>>>>> master
