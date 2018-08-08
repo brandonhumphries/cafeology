@@ -209,3 +209,6 @@ body {
     color: rgba(186,142,93,1);
 	font-family: sans-serif;
 }
+.events-main {
+    background: white;
+}
