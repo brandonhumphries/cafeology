@@ -34,7 +34,11 @@ var eventsRow = function(events) {
     var titleBox = document.createElement('div')
     
     titleBox.textContent = 'name: ' + events.name.text.substr(0,80)
-    descripBox.textContent = ' description: ' + events.description.text.substr(0,80) 
+    descripBox.textContent = ' description: ' + events.description.text.substr(0,80)
+    var description = events.description.text
+    descripBox.addEventListener('click', function() {
+        descripBox.textContent = description
+    })
     dateBox.textContent = ' date: ' + events.start.local
     
     var events = document.querySelector('.coffeeevents')
