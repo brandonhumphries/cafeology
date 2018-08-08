@@ -96,10 +96,13 @@ var displayBlogPosts = function (retrievedBlogPosts) {
 };
 var eventsRow = function(events) {
     var eventList = document.createElement('li')
+    var url = document.createElement('a')
     var descripBox = document.createElement('div')
     var dateBox = document.createElement('div')
     var titleBox = document.createElement('div')
-    
+
+    url.setAttribute('href', events.url)
+    url.target = ('_blank')
     titleBox.textContent = 'name: ' + events.name.text.substr(0,80)
     descripBox.textContent = ' description: ' + events.description.text.substr(0,80)
     var description = events.description.text
@@ -109,9 +112,10 @@ var eventsRow = function(events) {
     dateBox.textContent = ' date: ' + events.start.local
     
     var events = document.querySelector('.coffeeevents')
-    eventList.appendChild(titleBox)
-    eventList.appendChild(descripBox)
-    eventList.appendChild(dateBox)
+    url.appendChild(titleBox)
+    url.appendChild(descripBox)
+    url.appendChild(dateBox)
+    eventList.appendChild(url)
     events.appendChild(eventList)
 }
 $.ajax('https://www.eventbriteapi.com/v3/events/search/?q=coffee+&sort_by=distance&location.address=Atlanta&location.within=60mi&token=7TWTF7476W67E2AALYCA', {
