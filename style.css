@@ -1,4 +1,10 @@
-html, body {
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0; 
+}
+body {
     height: auto;
     width: 100%;
     margin: 0;
@@ -83,13 +89,13 @@ html, body {
     padding-bottom: 0.3em;
 }
 .content-master-container {
+    max-width: 90%;
     font-style: bold;
     font-family: sans-serif;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    max-width: 560px;
     overflow-y: auto;
     background-color: rgba(255,255,255,.5);
 }
@@ -102,40 +108,40 @@ html, body {
     flex-direction: column;
     align-items: center;
 }
-.individual-content-container-aeropress-coffee {
+/* .individual-content-container-aeropress-coffee {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: auto;
-}
-.vid-container {
+} */
+/* .vid-container {
     position: relative;
     min-height: 315px;
     max-height: 315px;
     width: 100%;
     max-width: 516px;
     overflow: hidden;
-}
-.content-master-container {
+} */
+/* .content-master-container {
     display: flex;
     flex-direction: column;
     max-width: 80%;
     flex-grow: inherit;
-}
+} */
 .individual-content-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 8px;
 }
-.training-video {
+/* .training-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border: 0;
-}
+} */
 .video-description {
     display: flex;
     max-width: 500px;
