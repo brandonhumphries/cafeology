@@ -1,3 +1,5 @@
+var userProfile = {displayName: '', email: '', photoUrl: '', uid: ''}
+
 var closeSurveryButton = document.querySelector('[class="lightbox-close-button"]');
 closeSurveryButton.addEventListener('click', function(){
     var surveyLightbox = document.querySelector('[class="lightbox-questionnaire-container"]')
@@ -25,6 +27,7 @@ importSurveyInformation.addEventListener('submit', function (event) {
 
 });
 
+<<<<<<< HEAD
 var eventsRow = function(events) {
     var eventList = document.createElement('li')
     var descripBox = document.createElement('div')
@@ -54,3 +57,40 @@ $.ajax('https://www.eventbriteapi.com/v3/events/search/?q=coffee+&sort_by=distan
 	}	
 )		
 // firebase.auth();
+=======
+var parseLocalStorage = function() {
+    var retrievedStorage = localStorage.getItem('firebaseui::rememberedAccounts');
+    var parsedStorage = JSON.parse(retrievedStorage);
+    return parsedStorage;
+};
+
+
+var signoutButton = document.querySelector('[id="sign-in"]');
+console.log(signoutButton.textContent);
+signoutButton.addEventListener('click', function (){
+    if (signoutButton.textContent === 'Sign out') {
+        firebase.auth().signOut().then(function () {
+            localStorage.removeItem('user');
+            localStorage.removeItem('firebaseui::rememberedAccounts');
+            console.log('Signed Out');
+        }, function(error) {
+            console.error('Sign Out Error', error);
+        })
+    }
+    else if (signoutButton.textContent === 'Sign in') {
+        console.log('hi')
+        var surveyLightbox = document.querySelector('[class="lightbox-questionnaire-container"]');
+        surveyLightbox.classList.add('visible');
+        surveyLightbox.classList.remove('hidden');
+    }
+});
+
+
+console.log(parseLocalStorage());
+
+if (parseLocalStorage() !== null) {
+    var surveyLightbox = document.querySelector('[class="lightbox-questionnaire-container"]')
+    surveyLightbox.classList.add('hidden');
+}
+
+>>>>>>> master
