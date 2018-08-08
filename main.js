@@ -47,10 +47,9 @@ signoutButton.addEventListener('click', function (){
             console.error('Sign Out Error', error);
         })
     }
-    if (signoutButton.textContent === 'Sign in') {
-        console.log('hi')
-        var surveyLightbox = document.querySelector('[class="signin-lightbox-container"]');
-        surveyLightbox.classList.add('visible');
+    else if (signoutButton.textContent === 'Sign in') {
+        var signinLightbox = document.querySelector('[class="signin-lightbox-container"]');
+        signinLightbox.classList.add('visible');
     }
 });
 
