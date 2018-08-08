@@ -1,4 +1,4 @@
-var userProfile = {displayName: '', email: '', photoUrl: '', uid: ''};
+var userProfile = {displayName: '', email: '', photoUrl: '', uid: '', survey: {}};
 var retrievedBlogPosts = [];
 
 var closeSurveryButton = document.querySelector('[class="lightbox-close-button"]');
@@ -24,9 +24,19 @@ importSurveyInformation.addEventListener('submit', function (event) {
     surveyResults.sweetness = sweetnessInput.value;
     surveyResults.flavor = flavorInput.value;
     console.log(surveyResults);
+    saveDataLocalStorage(stringifyData(surveyResults));
     surveyLightbox.classList.add('hidden');
 
 });
+
+var stringifyData = function (data) {
+    var stringifiedData = JSON.stringify(data);
+    return stringifiedData;
+};
+
+var saveDataLocalStorage = function (stringifiedData) {
+    localStorage.setItem('survey', stringifiedData);
+};
 
 var parseLocalStorage = function() {
     var retrievedStorage = localStorage.getItem('firebaseui::rememberedAccounts');
@@ -47,10 +57,9 @@ signoutButton.addEventListener('click', function (){
             console.error('Sign Out Error', error);
         })
     }
-    if (signoutButton.textContent === 'Sign in') {
-        console.log('hi')
-        var surveyLightbox = document.querySelector('[class="signin-lightbox-container"]');
-        surveyLightbox.classList.add('visible');
+    else if (signoutButton.textContent === 'Sign in') {
+        var signinLightbox = document.querySelector('[class="signin-lightbox-container"]');
+        signinLightbox.classList.add('visible');
     }
 });
 
