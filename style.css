@@ -15,7 +15,7 @@ body {
     display: flex;
     top: 0;
     left: 0;
-    width: 100;
+    width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -89,7 +89,7 @@ body {
     padding-bottom: 0.3em;
 }
 .content-master-container {
-    max-width: 90%;
+    width: 90%;
     font-style: bold;
     font-family: sans-serif;
     display: flex;
@@ -108,47 +108,30 @@ body {
     flex-direction: column;
     align-items: center;
 }
-/* .individual-content-container-aeropress-coffee {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-} */
-/* .vid-container {
-    position: relative;
-    min-height: 315px;
-    max-height: 315px;
-    width: 100%;
-    max-width: 516px;
-    overflow: hidden;
-} */
-/* .content-master-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 80%;
-    flex-grow: inherit;
-} */
 .individual-content-container{
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 8px;
 }
-/* .training-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.vid-container {
+    width: 300px;
+    height: 150px;
     border: 0;
-} */
+}
 .video-description {
     display: flex;
-    max-width: 500px;
+    flex-grow: 1;
+    max-width: 65%;
     color: rgba(186,142,93,1);
+    padding-left: 1em;
+    padding-right: 1em;
     font-style: normal;
 }
 .calculator-container {
+    width: 65%;
+    overflow-x: auto;
     display: flex;
     justify-content: space-between;
 }
@@ -208,6 +191,18 @@ body {
 	justify-content: left;
     color: rgba(186,142,93,1);
 	font-family: sans-serif;
+}
+@media (min-width: 768px){
+    .vid-container{
+        width: 700px;
+        height: 350px;
+    }
+}
+@media (min-width: 1200px){
+    .vid-container{
+        width: 1000px;
+        height: 500px;
+    }
 }
 .events-main {
     background: white;
