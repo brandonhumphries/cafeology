@@ -118,7 +118,7 @@ var eventsRow = function(events) {
     eventList.appendChild(url)
     events.appendChild(eventList)
 }
-$.ajax('https://www.eventbriteapi.com/v3/events/search/?q=coffee+&sort_by=distance&location.address=Atlanta&location.within=60mi&token=7TWTF7476W67E2AALYCA', {
+$.ajax('https://www.eventbriteapi.com/v3/events/search/?q=coffee+&sort_by=best&location.address=Atlanta%2C+GA&location.within=40mi&categories=110&include_unavailable_events=on&token=7TWTF7476W67E2AALYCA', {
 		success: function(data) {
 			console.log(data)
             var eventsArray = data.events;
