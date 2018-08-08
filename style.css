@@ -4,7 +4,6 @@ html, body {
     margin: 0;
     padding: 0; 
 }
-
 .lightbox-questionnaire-container {
     position: fixed;
     display: flex;
@@ -18,84 +17,67 @@ html, body {
     font-family: sans-serif;
     z-index: 5;
 }
-
 .hidden {
     display: none;
 }
-
 .lightbox-questionnaire {
     display: flex;
     flex-direction: column;
     padding: 6px;
     background-color: white;
 }
-
 .lightbox-close-button-container {
     display: flex;
     flex-direction: row-reverse;
 }
-
 .survey-login-container {
     display: flex;
 }
-
 .coffee-questionnaire {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .form-group {
     margin: 1em;
 }
-
 .temperature-input-container {
     display: flex;
     flex-direction: column;
 }
-
 .temperature-header {
     text-align: center;
 }
-
 .temperature-buttons-container {
     display: flex;
     padding-top: 0.3em;
 }
-
 .radio {
     padding: 0 1em;
 }
-
 .strength-level-header {
     text-align: center;
     padding-bottom: 0.3em;
 }
-
 .strength-level {
     display: flex;
     flex-direction: column;
 }
-
 .sweetness-level-header {
     padding-bottom: 0.3em;
 }
-
 .sweetness-level {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .sweetness-level-input {
     align-self: stretch;
 }
-
 .cream-level {
     display: flex;
     flex-direction: column;
 }
-
 .flavor-container {
     display: flex;
     padding-bottom: 0.3em;
