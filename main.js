@@ -1,4 +1,5 @@
-var userProfile = {displayName: '', email: '', photoUrl: '', uid: ''}
+var userProfile = {displayName: '', email: '', photoUrl: '', uid: ''};
+var retrievedBlogPosts = [];
 
 var closeSurveryButton = document.querySelector('[class="lightbox-close-button"]');
 closeSurveryButton.addEventListener('click', function(){
@@ -46,11 +47,10 @@ signoutButton.addEventListener('click', function (){
             console.error('Sign Out Error', error);
         })
     }
-    else if (signoutButton.textContent === 'Sign in') {
+    if (signoutButton.textContent === 'Sign in') {
         console.log('hi')
-        var surveyLightbox = document.querySelector('[class="lightbox-questionnaire-container"]');
+        var surveyLightbox = document.querySelector('[class="signin-lightbox-container"]');
         surveyLightbox.classList.add('visible');
-        surveyLightbox.classList.remove('hidden');
     }
 });
 
@@ -62,3 +62,41 @@ if (parseLocalStorage() !== null) {
     surveyLightbox.classList.add('hidden');
 }
 
+
+
+
+console.log(retrievedBlogPosts);
+
+var displayBlogPosts = function (retrievedBlogPosts) {
+    retrievedBlogPosts.forEach( function (post) {
+        var blogPostsSection = document.querySelector('[class="blog-posts-section"]');
+        var blogPostContainer = document.createElement('li');
+        var blogPostTitle = document.createElement('h3');
+        var blogPostContent = document.createElement('p');
+        var blogPostTest = document.createElement('body');
+        var blogPostLink = document.createElement('a');
+
+        blogPostTitle.textContent = post.title;
+        blogPostContent.textContent = post.content;
+        blogPostLink.textContent = post.title;
+        blogPostLink.setAttribute('href', post.url)
+        blogPostContainer.appendChild(blogPostTitle);
+        blogPostContainer.appendChild(blogPostLink);
+        blogPostsSection.appendChild(blogPostContainer);
+    })
+};
+
+var retrieveBlogPosts = function () {
+    $.ajax('https://www.googleapis.com/blogger/v3/blogs/22044142/posts?key=AIzaSyAyiHkRXPD9lFnkjRtYN0uv1J2r8eOZxOA', {
+        success: function(data) {
+            console.log(data);
+            var retrievedData = data;
+            var dataValues = Object.values(retrievedData);
+            retrievedBlogPosts = dataValues[2];
+            console.log(retrievedBlogPosts);
+            displayBlogPosts(retrievedBlogPosts);
+        }
+    });
+};
+
+retrieveBlogPosts();
