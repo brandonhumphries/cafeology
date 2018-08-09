@@ -181,6 +181,10 @@ body {
     height: 2.8125em;
     border-radius: 7px;
 }
+.events-button-anchor {
+    text-decoration: none;
+    align-self: center;
+}
 .logo {
     display: flex;
     margin: 0;
