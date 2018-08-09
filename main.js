@@ -1,6 +1,64 @@
 var userProfile = {displayName: '', email: '', photoUrl: '', uid: '', survey: {}};
 var retrievedBlogPosts = [];
-
+var suggestContent = function (surveyResults){
+    if (surveyResults.temperature === "Iced"){
+        if (surveyResults.strength === "3"){
+            var coldBrew = document.getElementById("cold-brew-coffee");
+            coldBrew.scrollIntoView();
+            //point to cold brew
+        }
+        else {
+            var chemexIced = document.getElementById("chemex-iced-coffee");
+            chemexIced.scrollIntoView();
+            //point to Chemex iced
+        }
+    }
+    else if (surveyResults.strength === "3"){
+        if (surveyResults.cream === "3"){
+            var mokaPot = document.getElementById("moka-pot-espresso");
+            mokaPot.scrollIntoView();
+            //point to moka pot
+        }
+        else if (surveyResults.cream === "2"){
+            var handpresso = document.getElementById("handpresso-espresso");
+            handpresso.scrollIntoView();
+            //point to handpresso
+        }
+        else if (surveyResults.cream === "1"){
+            var frenchPress = document.getElementById("french-press");
+            frenchPress.scrollIntoView();
+            //point to french press
+        }
+    }
+    else if (surveyResults.strength === "2"){
+        if (surveyResults.cream === "1"){
+            var aeroPressLatte = document.getElementById("aeropress-latte");
+            aeroPressLatte.scrollIntoView();
+            //point to AeroPress Latte
+        }
+        else {
+            var aeroPressCoffee = document.getElementById("aeropress-coffee");
+            aeroPressCoffee.scrollIntoView();
+            //point to AeroPress Coffee
+        }
+    }
+    else if (surveyResults.strength === "1"){
+        if (surveyResults.cream === "3"){
+            var chemex = document.getElementById("chemex-pour-over");
+            chemex.scrollIntoView();
+            //point to Chemex Pour over
+        }
+        else {
+            var v60 = document.getElementById("pour-over-coffee");
+            v60.scrollIntoView();
+            //point to V60
+        }
+    }
+    else {
+        v60.scrollIntoView();
+        //point to V60
+    }
+};
 var closeSurveryButton = document.querySelector('[class="lightbox-close-button"]');
 closeSurveryButton.addEventListener('click', function(){
     var surveyLightbox = document.querySelector('[class="lightbox-questionnaire-container"]')
@@ -26,8 +84,12 @@ importSurveyInformation.addEventListener('submit', function (event) {
     console.log(surveyResults);
     saveDataLocalStorage(stringifyData(surveyResults));
     surveyLightbox.classList.add('hidden');
+    suggestContent(surveyResults);
+    
 
 });
+
+
 
 var stringifyData = function (data) {
     var stringifiedData = JSON.stringify(data);
