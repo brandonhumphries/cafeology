@@ -181,7 +181,7 @@ body {
     height: 2.8125em;
     border-radius: 7px;
 }
-.logo {
+.logo-anchor {
     display: flex;
     margin: 0;
     align-self: center;
@@ -190,7 +190,8 @@ body {
     flex-direction: row;
 	justify-content: left;
     color: rgba(186,142,93,1);
-	font-family: sans-serif;
+    font-family: sans-serif;
+    text-decoration: none;
 }
 .blog-header {
     color: white;
