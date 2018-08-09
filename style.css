@@ -237,6 +237,14 @@ body {
     width: 90%;
     max-height: 50%;
     background-color: rgba(255,255,255,.5);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: auto;
+}
+.coffeeevents {
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -244,24 +252,48 @@ body {
     align-items: center;
     overflow-y: auto;
 }
-
 .single-event-container {
     display: flex;
     flex-direction: row;
+    position: relative;
     width: 90%;
+    text-align: center;
+    margin: 1em;
     align-items: center;
     background-color: rgba(186,142,93,1);
     justify-content: space-between;
-    padding: 8px; 
+    padding: 5px; 
+    flex: 1 1 auto;
+    justify-content: space-around;
+    border-radius: 20%;
+
 }
 .title-container {
-    display: flex
-
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+}
+.descrip-container{
+    display: flex;
+    color: white;
+    padding: 5px;
 }
 
+.date-container{
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.anchorTag {
+    text-decoration: none;
+}
 .event-header {
     color: white;
     background-color: rgba(186,142,93,1);
     padding: 1em;
     border-radius: 25%;
+    display: block;
+    font-size: 2em; 
 }
