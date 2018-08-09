@@ -101,7 +101,7 @@ var saveDataLocalStorage = function (stringifiedData) {
 };
 
 var parseLocalStorage = function() {
-    var retrievedStorage = localStorage.getItem('firebaseui::rememberedAccounts');
+    var retrievedStorage = localStorage.getItem('survey');
     var parsedStorage = JSON.parse(retrievedStorage);
     return parsedStorage;
 };
@@ -125,18 +125,14 @@ signoutButton.addEventListener('click', function (){
     }
 });
 
-
-console.log(parseLocalStorage());
-
-if (parseLocalStorage() !== null) {
-    var surveyLightbox = document.querySelector('[class="lightbox-questionnaire-container"]')
-    surveyLightbox.classList.add('hidden');
+var checkForSurvey = function () {
+    if (parseLocalStorage() !== null) {
+        var surveyLightbox = document.querySelector('[class="lightbox-questionnaire-container"]')
+        surveyLightbox.classList.add('hidden');
+    }
 }
 
-
-
-
-console.log(retrievedBlogPosts);
+checkForSurvey();
 
 var displayBlogPosts = function (retrievedBlogPosts) {
     retrievedBlogPosts.forEach( function (post) {
