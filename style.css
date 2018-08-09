@@ -15,8 +15,8 @@ body {
     display: flex;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     justify-content: center;
     align-items: center;
     background-color: rgb(184, 181, 181, 0.5);
@@ -130,7 +130,7 @@ body {
     font-style: normal;
 }
 .calculator-container {
-    width: 65%;
+    width: 70%;
     overflow-x: auto;
     display: flex;
     justify-content: space-between;
@@ -181,11 +181,15 @@ body {
     height: 2.8125em;
     border-radius: 7px;
 }
+.events-button-anchor {
+    text-decoration: none;
+    align-self: center;
+}
 .blog-button-anchor {
     text-decoration: none;
     align-self: center;
 }
-.logo {
+.logo-anchor {
     display: flex;
     margin: 0;
     align-self: center;
@@ -194,7 +198,8 @@ body {
     flex-direction: row;
 	justify-content: left;
     color: rgba(186,142,93,1);
-	font-family: sans-serif;
+    font-family: sans-serif;
+    text-decoration: none;
 }
 .blog-header {
     color: white;
@@ -203,7 +208,7 @@ body {
     border-radius: 25%;
 }
 .blog-posts-section {
-    width: 50%;
+    width: 70%;
     max-height: 50%;
     background-color: rgba(255,255,255,.5);
     padding: 0;
@@ -217,7 +222,7 @@ body {
     background-color: rgba(186,142,93,1);
     text-align: center;
     list-style: none;
-    width: 50%;
+    width: 70%;
     margin: 1em;
     border-radius: 15%;
 }
@@ -227,14 +232,14 @@ body {
 }
 @media (min-width: 768px){
     .vid-container{
-        width: 700px;
-        height: 350px;
+        width: 600px;
+        height: 300px;
     }
 }
 @media (min-width: 1200px){
     .vid-container{
-        width: 1000px;
-        height: 500px;
+        width: 800px;
+        height: 400px;
     }
 }
 .events-main {
