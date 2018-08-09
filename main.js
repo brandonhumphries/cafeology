@@ -166,15 +166,21 @@ var eventsRow = function(events) {
     var dateBox = document.createElement('div')
     var titleBox = document.createElement('div')
 
+    url.classList.add('anchorTag')
     url.setAttribute('href', events.url)
     url.target = ('_blank')
-    titleBox.textContent = 'name: ' + events.name.text.substr(0,80)
-    descripBox.textContent = ' description: ' + events.description.text.substr(0,80)
+    titleBox.textContent =  events.name.text.substr(0,120)
+    descripBox.textContent = events.description.text.substr(0,120)
+    dateBox.textContent = events.start.local
+
     var description = events.description.text
     descripBox.addEventListener('click', function() {
         descripBox.textContent = description
     })
-    dateBox.textContent = ' date: ' + events.start.local
+    eventList.classList.add('single-event-container')
+    titleBox.classList.add('title-container')
+    descripBox.classList.add('descrip-container')
+    dateBox.classList.add('date-container')
     
     var events = document.querySelector('.coffeeevents')
     url.appendChild(titleBox)
