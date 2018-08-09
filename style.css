@@ -139,6 +139,8 @@ body {
 }
 .calculator-item {
     padding: 1em;
+    color: rgba(186,142,93,1);
+    text-shadow: 1px 1px 2px black;
 }
 .header {
 	margin: 0;
