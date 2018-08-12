@@ -215,4 +215,22 @@ var retrieveBlogPosts = function () {
     });
 };
 
+// var retrieveBlogPosts = fetch('https://www.googleapis.com/blogger/v3/blogs/22044142/posts?key=AIzaSyAyiHkRXPD9lFnkjRtYN0uv1J2r8eOZxOA');
+// retrieveBlogPosts.then(function(blogPosts){
+//     var parsedBlogPosts = blogPosts.JSON();
+
+// })
+// , {
+//         success: function(data) {
+//             console.log(data);
+//             var retrievedData = data;
+//             var dataValues = Object.values(retrievedData);
+//             retrievedBlogPosts = dataValues[2];
+//             console.log(retrievedBlogPosts);
+//             displayBlogPosts(retrievedBlogPosts);
+//         }
+//     });
+// };
+
+
 retrieveBlogPosts();
