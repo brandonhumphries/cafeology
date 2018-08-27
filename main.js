@@ -138,8 +138,6 @@ var displayBlogPosts = function (retrievedBlogPosts) {
     retrievedBlogPosts.forEach( function (post) {
         var blogPostsSection = document.querySelector('[class="blog-posts-section"]');
         var blogPostContainer = document.createElement('li');
-        var blogPostTitle = document.createElement('h3');
-        var blogPostContent = document.createElement('p');
         var blogPostLink = document.createElement('a');
         var blogAuthor = document.createElement('p');
 
@@ -153,7 +151,6 @@ var displayBlogPosts = function (retrievedBlogPosts) {
 
         blogPostLink.textContent = post.title;
         blogPostLink.setAttribute('href', post.url);
-        blogPostContainer.appendChild(blogPostTitle);
         blogPostContainer.appendChild(blogPostLink);
         blogPostContainer.appendChild(blogAuthor);
         blogPostsSection.appendChild(blogPostContainer);

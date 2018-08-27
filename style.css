@@ -207,22 +207,30 @@ body {
     font-family: sans-serif;
     text-decoration: none;
 }
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    align-items: center;
+}
 .blog-header {
     color: white;
     background-color: rgb(146, 111, 71);
     padding: 1em;
     border-radius: 25%;
+    text-align: center;
+    max-width: 15em;
 }
 .blog-posts-section {
-    width: 70%;
+    width: 100%;
     max-height: 50%;
     background-color: rgba(141, 151, 182, 0.6);
     padding: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     overflow-y: auto;
+    overflow-x: auto;
+    max-width: 100%;
 }
 .blog-post-container {
     background-color: rgb(196, 163, 126);
@@ -231,10 +239,19 @@ body {
     width: 70%;
     margin: 1em;
     border-radius: 15%;
+    display: flex;
+    flex-direction: column;
 }
 .blog-post-link {
     text-decoration: none;
     color: white;
+    width: 10em;
+    margin-top: 0.3em;
+}
+.blog-post-author {
+    width: 10em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
 }
 #sign-in-status {
     display: none;
